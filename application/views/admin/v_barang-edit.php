@@ -73,6 +73,7 @@
                                                 <label class="col-md-4 col-form-label">Nama Barang*</label>
                                                 <div class="col-md-8">
                                                     <input type="text" class="form-control" placeholder="Nama Barang" name="nama_barang" value="<?= $barang->nama_barang ?>">
+                                                    <span>Pastikan tidak menggunakan simbol (*/?^)</span>
                                                 </div>
                                             </div>
                                             <div class="form-group row">

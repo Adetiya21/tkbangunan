@@ -57,6 +57,7 @@ class Akun_saya extends CI_Controller {
 				$this->DButama->UpdateDB('tb_user',$where,$data);
 				// menyimpan nama session
 				$sess_data['nama'] = $this->input->post('nama');
+				$sess_data['alamat'] = $this->input->post('alamat');
 				$this->session->set_userdata($sess_data);
 				// menampilkan pesan sukses
 				$this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible" role="alert">

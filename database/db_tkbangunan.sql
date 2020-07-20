@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 20 Jul 2020 pada 15.35
+-- Waktu pembuatan: 20 Jul 2020 pada 17.17
 -- Versi server: 10.1.38-MariaDB
 -- Versi PHP: 7.3.3
 
@@ -40,8 +40,7 @@ CREATE TABLE `tb_admin` (
 --
 
 INSERT INTO `tb_admin` (`id`, `nama`, `username`, `password`) VALUES
-(1, 'Admin 1', 'admin', '$2y$10$94Dm7hGLu7SARBVm4bHPGe/XweoDb19GFc0/AM/OIplyuR3fkuE.u'),
-(2, 'Putra', '1', '$2y$10$f.1h0K5aPYv2O0jdm0ogpeWhtaPaX9e8VFrugC6ZtQs0n268kPcT2');
+(1, 'Admin 1', 'admin', '$2y$10$94Dm7hGLu7SARBVm4bHPGe/XweoDb19GFc0/AM/OIplyuR3fkuE.u');
 
 -- --------------------------------------------------------
 
@@ -66,24 +65,24 @@ CREATE TABLE `tb_barang` (
 --
 
 INSERT INTO `tb_barang` (`id_barang`, `id_satuan`, `nama_barang`, `harga_barang`, `stok_barang`, `tgl`, `deskripsi`, `gambar`, `slug`) VALUES
-(1, 1, 'Paku Kayu Ukuran 1.5inc - 2inc - 2.5inc - 3inc', 18000, 91, '2020-07-20 16:09:56', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>\r\n', '5208615b91bfcd27852ec90c3b4cb1dc.jpeg', 'paku-kayu-ukuran-15inc-2inc-25inc-3inc'),
+(1, 1, 'Paku Kayu Ukuran 1.5inc - 2inc - 2.5inc - 3inc', 18000, 90, '2020-07-20 16:09:56', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>\r\n', '5208615b91bfcd27852ec90c3b4cb1dc.jpeg', 'paku-kayu-ukuran-15inc-2inc-25inc-3inc'),
 (2, 2, 'Paku Beton', 25000, 100, '2020-07-20 15:26:22', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>\r\n', '548aebc78811c243f5740112843c38a1.jpeg', 'paku-beton'),
 (3, 3, 'Wastafel', 200000, 100, '2020-07-20 15:28:13', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>\r\n', '4e2166fafd4695c31adcc48114c73925.png', 'wastafel'),
 (4, 4, 'Ember Kecil', 15000, 100, '2020-07-20 15:29:35', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>\r\n', 'e061914d1d2e553057c86d99a56f1c3e.jpg', 'ember-kecil'),
-(5, 11, 'Plastik Cor', 7000, 100, '2020-07-20 15:32:13', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>\r\n', 'e2b1b1765d58d0241812c6fd03443657.jpg', 'plastik-cor'),
+(5, 11, 'Plastik Cor', 7000, 99, '2020-07-20 15:32:13', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>\r\n', 'e2b1b1765d58d0241812c6fd03443657.jpg', 'plastik-cor'),
 (6, 4, 'Terpal 3m X 4m', 70000, 98, '2020-07-20 15:33:27', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>\r\n', '08996399361ec7467843eb333d7a3228.jpeg', 'terpal-3m-x-4m'),
-(7, 11, 'Geotextille lebar 4m', 130000, 99, '2020-07-20 15:35:15', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>\r\n', '0cd0caad44bafd32cb9f67674b3e5200.jpg', 'geotextille-lebar-4m'),
+(7, 11, 'Geotextille lebar 4m', 130000, 98, '2020-07-20 15:35:15', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>\r\n', '0cd0caad44bafd32cb9f67674b3e5200.jpg', 'geotextille-lebar-4m'),
 (8, 5, 'Triplek Tebal Ukuran 3mm', 53000, 89, '2020-07-20 15:37:25', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>\r\n', '46aea18c3613fd6582410d9a73b1912e.jpeg', 'triplek-tebal-ukuran-3mm'),
 (9, 7, 'Cat Kayu', 40000, 100, '2020-07-20 15:39:37', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>\r\n', '037eec0c2be8c78f39efbe8022b5f913.jpg', 'cat-kayu'),
 (10, 5, 'Papan Mal', 13000, 100, '2020-07-20 15:41:04', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>\r\n', '4f70c953299b3f18035f9c4f6040473d.jpg', 'papan-mal'),
-(11, 6, 'Cerucuk Ukuran 5.7', 7000, 100, '2020-07-20 15:44:27', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>\r\n', '1244c2d8f23e12109c963592e4b8861c.jpg', 'cerucuk-ukuran-57'),
+(11, 6, 'Cerucuk Ukuran 5.7', 7000, 99, '2020-07-20 15:44:27', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>\r\n', '1244c2d8f23e12109c963592e4b8861c.jpg', 'cerucuk-ukuran-57'),
 (12, 6, 'Cerucuk Ukuran 6.8', 8000, 100, '2020-07-20 15:47:47', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>\r\n', '849e5f36cf70ff58a53418e394f74f55.jpg', 'cerucuk-ukuran-68'),
 (13, 6, 'Cerucuk Ukuran 8.10', 10000, 100, '2020-07-20 15:48:36', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>\r\n', 'c78592edc38c4ae1ade2bd05e89d4be9.jpg', 'cerucuk-ukuran-810'),
 (14, 8, 'Semen Holcim 4kg', 64000, 89, '2020-07-20 15:52:16', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>\r\n', 'bd2d751d0d9607a00f513218d405c7fe.jpg', 'semen-holcim-4kg'),
-(15, 8, 'Semen Holcim 50kg', 72000, 99, '2020-07-20 15:52:53', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>\r\n', '4cffe2b756413907a6186d5e546e12b0.jpeg', 'semen-holcim-50kg'),
-(16, 9, 'Batu Beton Ukuran 1cm2', 250000, 98, '2020-07-20 16:09:19', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>\r\n', '17db1b6c0523a66e56e69776fdd17c02.jpeg', 'batu-beton-ukuran-1cm2'),
-(17, 9, 'Pasir Halus / Kasar', 130000, 100, '2020-07-20 15:58:30', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>\r\n', '403c5dad786265d44ff74ad19e410b23.jpg', 'pasir-halus-kasar'),
-(18, 10, 'Thinner', 20000, 91, '2020-07-20 16:04:28', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>\r\n', '688d003dc1c4cb9ae559092b2b69890b.jpg', 'thinner');
+(15, 8, 'Semen Holcim 50kg', 72000, 95, '2020-07-20 15:52:53', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>\r\n', '4cffe2b756413907a6186d5e546e12b0.jpeg', 'semen-holcim-50kg'),
+(16, 9, 'Batu Beton Ukuran 1cm2', 250000, 96, '2020-07-20 16:09:19', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>\r\n', '17db1b6c0523a66e56e69776fdd17c02.jpeg', 'batu-beton-ukuran-1cm2'),
+(17, 9, 'Pasir Halus - Kasar', 130000, 99, '2020-07-20 22:08:07', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>\r\n', '403c5dad786265d44ff74ad19e410b23.jpg', 'pasir-halus-kasar'),
+(18, 10, 'Thinner', 20000, 86, '2020-07-20 16:04:28', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>\r\n', '688d003dc1c4cb9ae559092b2b69890b.jpg', 'thinner');
 
 -- --------------------------------------------------------
 
@@ -112,14 +111,6 @@ CREATE TABLE `tb_invoice` (
   `total` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data untuk tabel `tb_invoice`
---
-
-INSERT INTO `tb_invoice` (`id_invoice`, `no_invoice`, `email_user`, `tgl`, `status`, `total`) VALUES
-(1, 'TB-2007200001', 'user1@user.com', '2020-07-18 00:00:00', 'Selesai', 1175000),
-(2, 'TB-2007200002', 'user1@user.com', '2020-07-20 16:53:09', 'Dibatalkan', 200000);
-
 -- --------------------------------------------------------
 
 --
@@ -133,20 +124,6 @@ CREATE TABLE `tb_pesanan` (
   `qty` int(3) NOT NULL,
   `slug` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `tb_pesanan`
---
-
-INSERT INTO `tb_pesanan` (`id_pesanan`, `no_invoice`, `id_barang`, `qty`, `slug`) VALUES
-(1, 'TB-2007200001', 15, 1, 'semen-holcim-50kg'),
-(2, 'TB-2007200001', 14, 10, 'semen-holcim-4kg'),
-(3, 'TB-2007200001', 8, 1, 'triplek-tebal-ukuran-3mm'),
-(4, 'TB-2007200001', 6, 1, 'terpal-3m-x-4m'),
-(5, 'TB-2007200001', 16, 1, 'batu-beton-ukuran-1cm2'),
-(6, 'TB-2007200001', 1, 5, 'paku-kayu-ukuran-15inc-2inc-25inc-3inc'),
-(7, 'TB-2007200002', 7, 1, 'geotextille-lebar-4m'),
-(8, 'TB-2007200002', 6, 1, 'terpal-3m-x-4m');
 
 --
 -- Trigger `tb_pesanan`
@@ -311,7 +288,7 @@ ALTER TABLE `tb_admin`
 -- AUTO_INCREMENT untuk tabel `tb_barang`
 --
 ALTER TABLE `tb_barang`
-  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_gambar_barang`
@@ -323,13 +300,13 @@ ALTER TABLE `tb_gambar_barang`
 -- AUTO_INCREMENT untuk tabel `tb_invoice`
 --
 ALTER TABLE `tb_invoice`
-  MODIFY `id_invoice` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_invoice` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_pesanan`
 --
 ALTER TABLE `tb_pesanan`
-  MODIFY `id_pesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_pesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_satuan`
@@ -347,7 +324,7 @@ ALTER TABLE `tb_toko`
 -- AUTO_INCREMENT untuk tabel `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
