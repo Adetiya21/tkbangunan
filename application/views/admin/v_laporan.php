@@ -207,7 +207,20 @@
             var length = info.iLength;
             var index = page * length + (iDisplayIndex + 1);
             $('td:eq(0)', row).html(index);
-        }
+        },
+        dom: 'Bfrtip',
+        buttons: [
+            {
+                extend:    'excelHtml5',
+                text:      '<i class="fa fa-file-excel-o"></i>',
+                titleAttr: 'Excel'
+            },
+            {
+                extend:    'pdfHtml5',
+                text:      '<i class="fa fa-file-pdf-o"></i>',
+                titleAttr: 'PDF'
+            }, 'print'
+        ]
     });
 
     //fun reload

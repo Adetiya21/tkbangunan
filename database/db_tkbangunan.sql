@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 20 Jul 2020 pada 15.13
+-- Waktu pembuatan: 20 Jul 2020 pada 15.35
 -- Versi server: 10.1.38-MariaDB
 -- Versi PHP: 7.3.3
 
@@ -40,7 +40,7 @@ CREATE TABLE `tb_admin` (
 --
 
 INSERT INTO `tb_admin` (`id`, `nama`, `username`, `password`) VALUES
-(1, 'Adetiya', '0', '$2y$10$MScn8tu40DUfSyYrusjH.utrtqKBdapNK7XYLVScWxPtxwWH8Z2M.'),
+(1, 'Admin 1', 'admin', '$2y$10$94Dm7hGLu7SARBVm4bHPGe/XweoDb19GFc0/AM/OIplyuR3fkuE.u'),
 (2, 'Putra', '1', '$2y$10$f.1h0K5aPYv2O0jdm0ogpeWhtaPaX9e8VFrugC6ZtQs0n268kPcT2');
 
 -- --------------------------------------------------------
