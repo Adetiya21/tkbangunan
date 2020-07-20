@@ -68,7 +68,7 @@ class User extends CI_Controller {
 		}
 	}
 
-	// fun hapus
+	// proses hapus
 	public function hapus($id)
 	{
 		if ($this->input->is_ajax_request()) {

@@ -6,7 +6,7 @@ class I extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct(); 
-		$this->load->helper('rupiah');
+		$this->load->helper('rupiah');  //load helper rupiah
 	}
 
 	// token digunakan untuk javascript
@@ -63,6 +63,7 @@ class I extends CI_Controller {
 		$this->load->view('utama/temp-footer');
 	}
 // <<------------------------ HALAMAN UTAMA ------------------------>>
+
 
 // <<------------------------  USER ------------------------>>
 	// proses login user
@@ -127,6 +128,7 @@ class I extends CI_Controller {
 		redirect('','refresh');
 	}
 // <<------------------------  USER ------------------------>>
+
 
 // <<------------------------ DAFTAR USER ------------------------>>
 	// proses daftar
@@ -252,7 +254,6 @@ class I extends CI_Controller {
 		$this->cart->update($data);
 		redirect('i/keranjang-belanja','refresh');
 	}
-
 // <<------------------------ KERANJANG ------------------------>>
 
 
@@ -297,6 +298,7 @@ class I extends CI_Controller {
         }
 	}
 // <<------------------------ DETAIL BARANG ------------------------>>
+
 
 // <<------------------------ CARI BARANG ------------------------>>
 	// fun cari barang
@@ -401,7 +403,6 @@ class I extends CI_Controller {
             redirect('error404','refresh');
         }
     }
-
 // <<------------------------ CARI BARANG ------------------------>>
 
 

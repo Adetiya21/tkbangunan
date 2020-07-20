@@ -49,6 +49,7 @@ class Pesanan extends CI_Controller {
 		}
 	}
 
+	// fun halaman detail pesanan
 	public function detail($no_invoice)
 	{
 		// cek data sesuai dengan di database
@@ -56,9 +57,11 @@ class Pesanan extends CI_Controller {
 		if ($cek->num_rows() == 1) {
 			$invoice = $cek->row();
 			$data['title'] = 'Detail Pesanan '.$invoice->no_invoice;
-			// select data dengan menggabungkan 3 buah tabel
 			$data['invoice'] = $cek->row();
+			// load data pemesan berdasarkan kondisi tertentu
 			$data['pemesan'] = $this->DButama->GetDBWhere('tb_user', array('email' => $invoice->email_user, ))->result();
+
+			// select data dengan menggabungkan 3 buah tabel
 			$where  = array('tb_pesanan.no_invoice' => $no_invoice, );
 			$query = $this->db->select('tb_pesanan.no_invoice,tb_pesanan.id_barang,tb_pesanan.qty,
 				tb_invoice.email_user,tb_invoice.tgl,tb_invoice.total,tb_invoice.status,

@@ -60,7 +60,7 @@ class Welcome extends CI_Controller {
 							$sess_data['username'] = $key->username;
 							$this->session->set_userdata($sess_data);
 							$this->session->unset_userdata('user_logged_in');  //mengeluarkan session user
-							redirect('admin/admin', 'refresh');
+							redirect('admin/home', 'refresh');
 						}
 					}else{
 						// menampilkan pesan error

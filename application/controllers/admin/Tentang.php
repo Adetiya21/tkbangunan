@@ -105,19 +105,6 @@ class Tentang extends CI_Controller {
         return $this->upload->data('file_name');
     }
 
-    // fun value validasi
-    private function _Values()
-	{
-		$this->session->set_flashdata('nama', set_value('nama') );
-		$this->session->set_flashdata('no_telp', set_value('no_telp') );
-		$this->session->set_flashdata('email', set_value('email') );
-		$this->session->set_flashdata('sosmed', set_value('sosmed') );
-		$this->session->set_flashdata('alamat', set_value('alamat') );
-		$this->session->set_flashdata('iframe', set_value('iframe') );
-		$this->session->set_flashdata('deskripsi', set_value('deskripsi') );
-		$this->session->set_flashdata('keterangan', set_value('keterangan') );
-	}
-
 }
 
 /* End of file Tentang.php */

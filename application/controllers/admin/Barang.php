@@ -76,7 +76,6 @@ class Barang extends CI_Controller {
 		$config = array(
 			array('field' => 'id_satuan','label' => "Satuan Barang",'rules' => 'required'),
 			array('field' => 'nama_barang','label' => "Nama Barang",'rules' => 'required'),
-			// array('field' => 'ukuran','label' => 'Ukuran','rules' => 'required'),
 			array('field' => 'stok_barang','label' => 'Stok Barang','rules' => 'required'),
 			array('field' => 'harga_barang','label' => 'Harga Barang','rules' => 'required|numeric'),
 			array('field' => 'deskripsi','label' => 'Deskripsi Barang','rules' => 'required'),
@@ -157,7 +156,6 @@ class Barang extends CI_Controller {
 		$config = array(
 			array('field' => 'id_satuan','label' => "Satuan Barang",'rules' => 'required'),
 			array('field' => 'nama_barang','label' => "Nama Barang",'rules' => 'required'),
-			// array('field' => 'ukuran','label' => 'Ukuran','rules' => 'required'),
 			array('field' => 'stok_barang','label' => 'Stok Barang','rules' => 'required'),
 			array('field' => 'harga_barang','label' => 'Harga Barang','rules' => 'required|numeric'),
 			array('field' => 'deskripsi','label' => 'Deskripsi Barang','rules' => 'required'),
@@ -192,12 +190,14 @@ class Barang extends CI_Controller {
 					'slug' => $slug
 				);
 
+				// mengupload gambar
 				if(!empty($_FILES['gambar']['name']))
 				{
 					$upload = $this->_do_upload();
 					$data['gambar'] = $upload;
 				}
 
+				// fun update
 				$this->DButama->UpdateDB($this->table,$where,$data);
 				redirect('admin/barang','refresh');
 	        
@@ -259,7 +259,6 @@ class Barang extends CI_Controller {
 		$this->session->set_flashdata('nama_barang', set_value('nama_barang') );
 		$this->session->set_flashdata('id_satuan', set_value('id_satuan') );
 		$this->session->set_flashdata('stok_barang', set_value('stok_barang') );
-		// $this->session->set_flashdata('ukuran', set_value('ukuran') );
 		$this->session->set_flashdata('harga_barang', set_value('harga_barang') );
 		$this->session->set_flashdata('deskripsi', set_value('deskripsi') );
 	}

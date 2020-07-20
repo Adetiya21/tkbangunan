@@ -29,6 +29,7 @@ class Gambar extends CI_Controller {
 		redirect('admin/barang','refresh');
 	}
 
+	// fun halaman tambah gambar
 	public function barang($slug)
 	{
 		$cek = $this->DButama->GetDBWhere('tb_barang',array('slug'=> $slug));
@@ -45,6 +46,7 @@ class Gambar extends CI_Controller {
 		}
 	}
 
+	// fun proses tambah gambar
 	public function proses()
 	{
 		$slug = $this->input->post('slug');
@@ -57,6 +59,7 @@ class Gambar extends CI_Controller {
             'height' => 500
 		));
 
+		// menambah gambar multiple
 		$data = array();
 		foreach ($file as $f) {
 			array_push($data, array(
@@ -65,6 +68,7 @@ class Gambar extends CI_Controller {
 			));
 		}
 		$this->db->insert_batch($this->table, $data);
+		// menampilkan pesan sukses
 		$this->session->set_flashdata('pesan', '<div class="alert alert-success background-success">
 						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<i class="icofont icofont-close-line-circled text-white"></i>

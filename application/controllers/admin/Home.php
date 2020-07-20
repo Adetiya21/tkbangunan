@@ -8,15 +8,17 @@ class Home extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
+		// cek session admin sudah login
 		if ($this->session->userdata('admin_logged_in') !=  "Sudah_Loggin") {
 			echo "<script>
 			alert('Login Dulu!');";
 			echo 'window.location.assign("'.site_url("admin/welcome").'")
 			</script>';
 		}
-		$this->load->helper('rupiah');
+		$this->load->helper('rupiah');  //load helper rupiah
 	}
 
+	// fun halaman home
 	public function index()
 	{
 		$title = array('title' => 'Dashboard', );
@@ -51,6 +53,7 @@ class Home extends CI_Controller {
 		$this->load->view('admin/temp-footer');
 	}
 
+	// fun halaman profil
 	public function profil($id)
 	{
 		$cek = $this->DButama->GetDBWhere($this->table,array('id'=> $id));
@@ -65,10 +68,13 @@ class Home extends CI_Controller {
 		}
 	}
 
+	// proses edit profil
 	function edit_profil()
 	{
+		//load form validasi
 		$this->load->library('form_validation');
 
+		// field form validasi
 		$config = array(
 			array('field' => 'nama','label' => 'Nama','rules' => 'required',),
 			array('field' => 'username','label' => 'Username','rules' => 'required'),
@@ -77,7 +83,11 @@ class Home extends CI_Controller {
 		$this->form_validation->set_rules($config);
 		if ($this->form_validation->run() == FALSE)
 		{
-			$this->session->set_flashdata('error', validation_errors());
+			// menampilkan pesan error
+			$this->session->set_flashdata('error', '<div class="alert alert-danger alert-dismissible" role="alert">
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<strong>'.validation_errors().'</strong> 
+							</div>');
 			redirect('admin/home/profil/'.$this->session->userdata('id').'','refresh');
 		}else{
 			$where  = array('id' => $this->input->post('id'));
@@ -90,9 +100,12 @@ class Home extends CI_Controller {
 					'username' => $this->input->post('username'),
 					'password' => $hash
 				);
+				// menyimpan data session
 				$sess_data['nama'] = $this->input->post('nama');
 				$this->session->set_userdata($sess_data);
+				// fun update data
 				$this->DButama->UpdateDB($this->table,$where,$data);
+				// menampilkan pesan sukses
 				$this->session->set_flashdata('pesan', '<div class="alert alert-success background-success">
 						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<i class="icofont icofont-close-line-circled text-white"></i>

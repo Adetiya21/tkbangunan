@@ -45,7 +45,8 @@ class Pesanan_saya extends CI_Controller {
 			$row = $query->row();
 			$data['invoice'] 	= $row;
 			$data['ten'] = $this->DButama->GetDB('tb_toko')->row();  //load database tb_toko
-			$data['user'] = $this->DButama->GetDBWhere('tb_user',  array('email' => $this->session->userdata('email')))->row();  //load database tb_user
+			//load database tb_user
+			$data['user'] = $this->DButama->GetDBWhere('tb_user', array('email' => $this->session->userdata('email')))->row();
 			$data['title']='Detail Pesanan '.$inv;
 			
 			// load data pesanan barang berdasarkan no invoice yang terpilih
