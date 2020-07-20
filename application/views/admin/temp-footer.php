@@ -20,6 +20,17 @@
 <script type="text/javascript" src="<?=base_url('assets/back-end') ?>/files/bower_components/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.min.js"></script>
 <script type="text/javascript" src="<?=base_url('assets/back-end') ?>/files/bower_components/jquery-i18next/js/jquery-i18next.min.js"></script>
 
+<script type="text/javascript" src="<?=base_url('assets/back-end') ?>/files/bower_components/select2/js/select2.full.min.js"></script>
+
+<script type="text/javascript" src="<?=base_url('assets/back-end') ?>/files/bower_components/bootstrap-multiselect/js/bootstrap-multiselect.js">
+
+
+</script>
+<script type="text/javascript" src="<?=base_url('assets/back-end') ?>/files/bower_components/multiselect/js/jquery.multi-select.js"></script>
+<script type="text/javascript" src="<?=base_url('assets/back-end') ?>/files/assets/js/jquery.quicksearch.js"></script>
+
+<script type="text/javascript" src="<?=base_url('assets/back-end') ?>/files/assets/pages/advance-elements/select2-custom.js"></script>
+
 <script src="<?=base_url('assets/back-end') ?>/files/assets/pages/data-table/js/data-table-custom.js" type="text/javascript"></script>
 <script src="<?=base_url('assets/back-end') ?>/files/assets/js/pcoded.min.js" type="text/javascript"></script>
 <script src="<?=base_url('assets/back-end') ?>/files/assets/js/vartical-layout.min.js" type="text/javascript"></script>

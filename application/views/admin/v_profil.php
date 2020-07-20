@@ -30,7 +30,7 @@
                             <div class="col-lg-8">
                                 <div class="page-header-title">
                                     <div class="d-inline">
-                                        <h4>Profil</h4>
+                                        <h4>PROFIL</h4>
                                         <span>isi data diri anda.</span>
                                     </div>
                                 </div>

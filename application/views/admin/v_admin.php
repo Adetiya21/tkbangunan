@@ -16,7 +16,7 @@
                             <div class="col-lg-8">
                                 <div class="page-header-title">
                                     <div class="d-inline">
-                                        <h4>Admin</h4>
+                                        <h4>ADMIN</h4>
                                         <span>Berikut daftar para admin website.</span>
                                     </div>
                                 </div>
@@ -48,13 +48,13 @@
                                 <div class="card-header-right"> <ul class="list-unstyled card-option"> <li><i class="feather icon-maximize full-card"></i></li> <li><i class="feather icon-minus minimize-card"></i><li><i class="feather icon-trash close-card"></i></li></ul> </div>
                             </div>
                             <div class="card-block">
-                                <div class="dt-responsive table-responsive">
-                                    <table id="compact" class="table table-sm nowrap" width="100%">
+                                <div class="dt-responsive">
+                                    <table id="compact" class="table table-responsive table-sm nowrap" width="100%">
                                         <thead>
                                             <tr><th width="1%">No</th>
                                             <th>Nama</th>
                                             <th>Username</th>
-                                            <th width="10%">Action</th>
+                                            <th width="10%">#</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -71,8 +71,6 @@
 
 
 <!-- DataTables -->
-
-
 <script src="<?=base_url('assets/back-end') ?>/files/bower_components/datatables.net/js/jquery.dataTables.min.js" type="text/javascript"></script>
 <script src="<?=base_url('assets/back-end') ?>/files/bower_components/datatables.net-buttons/js/dataTables.buttons.min.js" type="text/javascript"></script>
 <script src="<?=base_url('assets/back-end') ?>/files/assets/pages/data-table/js/jszip.min.js" type="text/javascript"></script>
@@ -252,7 +250,7 @@
     }
 
     function refreshTokens() {
-        var url = "<?= base_url()."welcome/get_tokens" ?>";
+        var url = "<?= base_url()."i/get_tokens" ?>";
         $.get(url, function(theResponse) {
           /* you should do some validation of theResponse here too */
           $('#csrfHash').val(theResponse);;

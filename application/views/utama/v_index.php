@@ -1,145 +1,144 @@
-	<section>
-		<div class="container-fluid" style="margin-top:90px;">
-			<div class="row">
-				<div class="carousel" id="carousel-tengah" data-ride="carousel">
-					<!-- indicators dot noc -->
-					<ol class="carousel-indicators">
-						<li data-target="#carousel-tengah" data-slide-to="0" class="active"></li>
-						<?php foreach ($header->result() as $key) { ?>
-						<li data-target="#carousel-tengah" data-slide-to="1"></li>
-						<?php } ?>
-					</ol>
-
-					<!-- wrapper for sliders -->
-					<div class="carousel-inner" role="listbox">
-						<div class="item active">
-							<img src="<?= base_url('assets/front-end/') ?>images/bn-kanopi1.jpg" alt="bn-kanopi2" class="img-size">
-						</div>
-						<?php foreach ($header->result() as $key) { ?>
-						<div class="item">
-							<img src="<?php echo base_url().'assets/assets/img/header/'.$key->gambar ?>" alt="bn-kanopi1" class="img-size">
-						</div>
-						<?php } ?>
-					</div>
-
-					<!-- control next or prev buttons -->
-					<a href="#carousel-tengah" class="left carousel-control" role="button" data-slide="prev">
-						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-						<span class="sr-only">Previous</span>
-					</a>
-					<a href="#carousel-tengah" class="right carousel-control" role="button" data-slide="next">
-						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-						<span class="sr-only">Next</span>
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section>
-		<div class="container-fluid jenis-font2" style="text-align: center;">
-			<div class="row tm-content">
-				<?php foreach ($fasilitas->result() as $key) { ?>
-				<div class="col-md-4 col-xs-12">
-                    <div class="features_item sm-m-top-30">
-                     	<div class="f_item_icon f_item_text">
-                            <i class="fa <?= $key->icon ?>"></i>
-                            <h3><?= $key->judul ?></h3>
-                            <p><?= $key->deskripsi ?></p>
+<div class="main_slider" >
+    <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="6000">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active" >                
+                     <picture>
+                      <img src="<?= base_url('assets/front-end/images/header/bn0.jpg') ?>" alt="banner" class="d-block img-fluid">
+                    </picture>
+                    <div class="carousel-caption">
+                        <div align="center" class="ccontent">
+                            <h2>Toko Bangunan</h2>
+                            <p>Percayakan semua kebutuhan material anda pada kami</p>
+                            <a href="#barang" class="btn red_button2" style="width: 200px;">Belanja Sekarang</a>
                         </div>
-                    </div>
-                </div>
-	            <?php } ?>
-			</div>
-		</div>
-	</section>
-	<section>
-		<div class="container-fluid" style="text-align: center;">
-			<div class="row tentang-kami">
-				<h2 class="jenis-font3" style="font-size: 35px;">Tentang Kami</h2>
-				<p style="font-size: 15px;"><?= substr($tentang->keterangan, 0, 234) ?>...</p>
-				<a href="<?= site_url('tentang-kami') ?>">Selengkapnya</a> <br><br>
-			</div>
-		</div>
-	</section>
-	<section>
-		<div class="container-fluid">
-			<div class="row tm-content">
-				<div class="jenis-font3">
-					<h2 style="text-align:center; font-size: 35px;">GALERI</h2>
-				</div>
-				<div class="jenis-font2">
-					<?php foreach ($produk->result() as $key) { ?>
-					<div class="col-xs-6 col-md-3">
-				    	<a href="<?= base_url('assets/assets/img/produk/'.$key->gambar) ?>" class="thumbnail">
-				      		<img data-src="holder.js/100%x180" src="<?= base_url('assets/assets/img/produk/'.$key->gambar) ?>" alt="...">
-				    	</a>
-				  	</div>
-					<?php } ?>
-				</div>
-				<div class="col-xs-12 col-md-12" style="text-align: center;">
-				  	 <a href="<?= site_url('galeri') ?>"><button class="btn btn-default tbl-cari">Selengkapnya..</button></a>
-				</div>
-			</div>
-		</div>
-	</section>
+                    </div>                
+            </div>
+            <!-- /.carousel-item -->
+            <div class="carousel-item">                
+                     <picture>
+                      <img src="<?= base_url('assets/front-end/images/header/bn1.jpg') ?>" alt="banner" class="d-block img-fluid">
+                    </picture>
+                    <div class="carousel-caption justify-content-center align-items-center">
+                        <div align="center" class="ccontent">
+                            <h2>Daftarkan Diri Anda</h2>
+                            <p>Login atau daftarkan diri anda untuk dapat berbelanja</p>
+                            <button href="javascript:void(0)" onclick="login()" class="btn btn-warning" style="width: 150px;">Login</button>
+                            <button href="javascript:void(0)" onclick="daftar()" class="btn red_button2" style="width: 150px;">Daftar</button>
+                        </div>
+                    </div>                
+            </div>
+            <!-- /.carousel-item -->
+            <div class="carousel-item">                
+                     <picture>
+                      <img src="<?= base_url('assets/front-end/images/header/bn2.jpg') ?>" alt="banner" class="d-block img-fluid">
+                    </picture>
+                    <div class="carousel-caption justify-content-center align-items-center">
+                        <div align="center"  class="ccontent">
+                            <h2>Toko Bangunan</h2>
+                            <p>Barang kami Terpecaya, Aman, Kuat dan Tahan Lama</p>
+                            <!-- <span class="btn btn-sm btn-secondary">Learn How</span> -->
+                        </div>
+                    </div>                
+            </div>
+            <!-- /.carousel-item -->
+        </div>
+        <!-- /.carousel-inner -->
+        <!-- <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a> -->
+    </div>
+    <!-- /.carousel -->
+</div>
+<hr>
 
-	<section>
-		<div class="container-fluid">
+<!-- Barang -->
+	<div class="new_arrivals" id="barang">
+		<div class="container">
 			<div class="row">
-				<div class="jenis-font3">
-					<h2 style="text-align:center; font-size: 35px;">PRODUK</h2>
+				<div class="col text-center">
+					<div class="section_title new_arrivals_title">
+						<h2>Daftar Barang</h2>
+					</div>
 				</div>
-				<?php foreach ($kategori->result() as $key) {
-					if ($key->nama!='Produk Lainnya') {
-				?>
-				<div class="thumbnail col-md-6 col-xs-12" style="margin-top: -7px;">
-					<div class="media list-produk">
-						<a class="pull-left" href="<?= site_url('produk/i/'.$key->slug) ?>">
-							<img class="media-object" src="<?= base_url('assets/assets/img/kategori/'.$key->gambar) ?>" style="width: 90px; height: 90px;
-							margin-right: 5px;" alt="...">
-						</a>
-						<div class="media-body jenis-font2">
-						    <h4 class="media-heading"><a href="<?= site_url('produk/i/'.$key->slug) ?>" style="text-decoration: none; color: black"><?= $key->nama ?></a></h4>
-						    <p><?= $key->deskripsi ?>
-							<br/>
-							<a href="<?= site_url('produk/i/'.$key->slug) ?>">Selengkapnya..</a></p>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="product-grid wow fadeInUp" data-isotope='{ "itemSelector": ".product-item", "layoutMode": "fitRows" }'>
+						<!-- Product -->
+						<?php foreach ($barang->result() as $key) { ?>
+							<?php foreach ($satuan->result() as $key1){
+							 if ($key1->id_satuan==$key->id_satuan){ ?>
+						<div class="product-item">
+							<?php $attributes = array('class' => 'form-item'); ?>
+                            <?= form_open('', $attributes); ?>
+							<div class="product discount product_filter" style="padding: 10px">
+								<input type="hidden" name="id_barang" value="<?= $key->id_barang; ?>">
+								<div class="product_image" align="center">
+									<a href="<?= site_url('i/detail/'.$key->slug) ?>"><img src="<?= base_url('assets/back-end/images/produk/'.$key->gambar) ?>" alt="gambar"></a>
+								</div>
+								<!-- <div class="favorite"></div> -->
+								<div class="product_info">
+									<h6 class="product_name"><a href="<?= site_url('i/detail/'.$key->slug) ?>"><?= $key->nama_barang ?></a></h6>
+									<div class="product_price">Rp. <?= rupiah($key->harga_barang); ?>,- <span>/ <?= $key1->satuan ?></span></div>
+								</div>
+							</div>
+							<button class="red_button add_to_cart_button" type="submit" style="border: 0;color: #fff">Tambah Keranjang</button>
+							<!-- <div class="red_button add_to_cart_button"><a href="javascript:void(0)" onclick="tambah()">Tambah Keranjang</a></div> -->
+							<?= form_close(); ?> 
 						</div>
+						<?php } }}?>
 					</div>
+					<hr>
+					<div class="text-center">
+			        <div class="pagination modal-2">
+			            <?php echo $halaman; ?> <!--Memanggil variable pagination-->
+			        </div>
+			        </div>				
 				</div>
-				<?php } else { ?>
-				<div class="thumbnail col-xs-12" style="text-align: center;">
-					<div class="media list-produk">
-					  <a href="<?= site_url('produk/i/'.$key->slug) ?>">
-					    <img class="media-object" src="<?= base_url('assets/assets/img/kategori/'.$key->gambar) ?>" style="width: 90px; height: 90px;" alt="...">
-					  </a>
-					  <div class="media-body jenis-font2">
-					    <h4 class="media-heading" style="margin-top: 10px;"><a href="<?= site_url('produk/i/'.$key->slug) ?>" style="text-decoration: none; color: black;"><?= $key->nama ?></a></h4>
-					    <p>Besi pilihan yang dibentuk sedemikian rupa dan dipasang di depan rumah anad, sehingga dapat meningkatkan keamanan
-					    <br/>
-					    <a href="<?= site_url('produk/i/'.$key->slug) ?>">Selengkapnya..</a></p>
-					  </div>
-					</div>
-				</div>
-				<?php }} ?>
 			</div>
 		</div>
-	</section>
+	</div>
 
-	<section>
-		<div class="container-fluid map-section" id="temukan-kami">
-			<h2 class="jenis-font3" style="font-size: 50px;"><i class="fa fa-map-marker"></i> Temukan Kami</h2>
-		</div>
-		<div class="container-fluid">
-			<div class="row">
-				<?= $tentang->maps ?>
-			</div>
-		</div>
-	</section>
-	
-<script src="<?php echo base_url() ?>assets/front-end/js/jquery-1.11.1.min.js"></script>
-<script type="text/javascript">
+<!-- pagination -->
+<link rel="stylesheet" type="text/css" href="<?= base_url('assets/front-end/styles/style-pagination.css') ?>">
+
+<!-- menu aktif -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
     $(document).ready(function() {
-        $('.home').addClass('active');
+      $('.home').addClass('main-active');
+  	});
+
+    // script tambah keranjang-belanja
+    $(document).ready(function(){
+        $(".form-item").submit(function(e){
+            var form_data = $(this).serialize();
+            var button_content = $(this).find('button[type=submit]');
+            button_content.html('Proses...'); //Loading button text
+
+            $.ajax({ //make ajax request to cart_process.php
+                url: "<?php echo site_url('i/tambah_keranjang'); ?>",
+                type: "POST",
+                dataType:"json", //expect json value from server
+                data: form_data
+            }).done(function(data){ //on Ajax success
+                $("#cart-info").html(data.items); //total items in cart-info element
+                button_content.html('<i class="glyphicon glyphicon-shopping-cart"></i> Proses'); //reset button text to original text
+                alert("Produk sudah dimasukkan kekeranjang belanja anda!"); //alert user
+                location.reload();
+            })
+            e.preventDefault();
+
+        });
     });
 </script>

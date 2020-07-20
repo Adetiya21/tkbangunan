@@ -21,6 +21,7 @@
   <link rel="stylesheet" type="text/css" href="<?=base_url('assets/back-end') ?>/files/assets/pages/data-table/css/buttons.dataTables.min.css">
   <link rel="stylesheet" type="text/css" href="<?=base_url('assets/back-end') ?>/files/bower_components/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css">
 
+  <link rel="stylesheet" type="text/css" href="<?=base_url('assets/back-end') ?>/files/bower_components/select2/css/select2.min.css" />
   <link rel="stylesheet" type="text/css" href="<?=base_url('assets/back-end') ?>/files/assets/css/style.css">
   <link rel="stylesheet" type="text/css" href="<?=base_url('assets/back-end') ?>/files/assets/css/linearicons.css">
   <link rel="stylesheet" type="text/css" href="<?=base_url('assets/back-end') ?>/files/assets/css/jquery.mCustomScrollbar.css">
@@ -130,6 +131,18 @@
                             </li>
                         </ul>
                         <hr>
+
+                        <ul class="pcoded-item pcoded-left-item">                               
+                            <li class="tentang">
+                                <a href="<?= site_url('admin/tentang') ?>" class="waves-effect waves-dark">
+                                    <span class="pcoded-micon">
+                                        <i class="feather icon-briefcase"></i>
+                                    </span>
+                                    <span class="pcoded-mtext">Tentang Toko</span>
+                                </a>
+                            </li>
+                        </ul>
+
                         <ul class="pcoded-item pcoded-left-item">                               
                             <li class="admin">
                                 <a href="<?= site_url('admin/admin') ?>" class="waves-effect waves-dark">
@@ -140,58 +153,76 @@
                                 </a>
                             </li>
                         </ul>
+
+                        <ul class="pcoded-item pcoded-left-item">                               
+                            <li class="satuan">
+                                <a href="<?= site_url('admin/satuan') ?>" class="waves-effect waves-dark">
+                                    <span class="pcoded-micon">
+                                        <i class="feather icon-layers"></i>
+                                    </span>
+                                    <span class="pcoded-mtext">Satuan Barang</span>
+                                </a>
+                            </li>
+                        </ul>
+
                         <ul class="pcoded-item pcoded-left-item">
-                            <li class="produk pcoded-hasmenu">
+                            <li class="barang pcoded-hasmenu">
                                 <a href="javascript:void(0)" class="waves-effect waves-dark">
                                     <span class="pcoded-micon">
                                         <i class="feather icon-clipboard"></i>
                                     </span>
-                                    <span class="pcoded-mtext">Menu</span>
+                                    <span class="pcoded-mtext">Data Barang</span>
                                 </a>
                                 <ul class="pcoded-submenu">
-                                    <li class="">
-                                        <a href="#" class="waves-effect waves-dark">
-                                            <span class="pcoded-mtext">Menu</span>
+                                    <li class="daftar-barang">
+                                        <a href="<?= site_url('admin/barang') ?>" class="waves-effect waves-dark">
+                                            <span class="pcoded-mtext">Daftar Barang</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="pcoded-submenu">
+                                    <li class="tambah-barang">
+                                        <a href="<?= site_url('admin/barang/tambah') ?>" class="waves-effect waves-dark">
+                                            <span class="pcoded-mtext">Tambah Barang</span>
                                         </a>
                                     </li>
                                 </ul>
                             </li>
                         </ul>
+
                         <ul class="pcoded-item pcoded-left-item">                               
-                            <li class="">
-                                <a href="<?= site_url() ?>" class="waves-effect waves-dark">
+                            <li class="user">
+                                <a href="<?= site_url('admin/user') ?>" class="waves-effect waves-dark">
                                     <span class="pcoded-micon">
-                                        <i class="feather icon-briefcase"></i>
+                                        <i class="feather icon-users"></i>
                                     </span>
-                                    <span class="pcoded-mtext">Menu1</span>
+                                    <span class="pcoded-mtext">Daftar User</span>
                                 </a>
                             </li>
                         </ul>
+
                         <ul class="pcoded-item pcoded-left-item">                               
-                            <li class="">
-                                <a href="<?= site_url() ?>" class="waves-effect waves-dark">
+                            <li class="pesanan">
+                                <a href="<?= site_url('admin/pesanan') ?>" class="waves-effect waves-dark">
                                     <span class="pcoded-micon">
-                                        <i class="feather icon-menu"></i>
+                                        <i class="feather icon-shopping-cart"></i>
                                     </span>
-                                    <span class="pcoded-mtext">Menu2</span>
+                                    <span class="pcoded-mtext">Daftar Pesanan</span>
                                 </a>
                             </li>
                         </ul>
-                        <div class="pcoded-navigatio-lavel">Support</div>
-                        <ul class="pcoded-item pcoded-left-item">
-                            <li class="">
-                                <a href="http://html.codedthemes.com/Adminty/doc" target="_blank">
-                                    <span class="pcoded-micon"><i class="feather icon-monitor"></i></span>
-                                    <span class="pcoded-mtext">Documentation</span>
-                                </a>
-                            </li>
-                            <li class="">
-                                <a href="#" target="_blank">
-                                    <span class="pcoded-micon"><i class="feather icon-help-circle"></i></span>
-                                    <span class="pcoded-mtext">Submit Issue</span>
+
+                        <ul class="pcoded-item pcoded-left-item">                               
+                            <li class="laporan">
+                                <a href="<?= site_url('admin/laporan') ?>" class="waves-effect waves-dark">
+                                    <span class="pcoded-micon">
+                                        <i class="feather icon-book"></i>
+                                    </span>
+                                    <span class="pcoded-mtext">Laporan</span>
                                 </a>
                             </li>
                         </ul>
+                        
                         <hr><br><br>
                         <div class="pcoded-navigation-label" style=" text-align: center;color: #f0f0f0; font-size: 0.9em;">Copyright© 2020<br>Allrights Reserved.</div>
                     </div>

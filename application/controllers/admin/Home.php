@@ -14,20 +14,38 @@ class Home extends CI_Controller {
 			echo 'window.location.assign("'.site_url("admin/welcome").'")
 			</script>';
 		}
+		$this->load->helper('rupiah');
 	}
 
 	public function index()
 	{
 		$title = array('title' => 'Dashboard', );
-		$data['header'] = $this->DButama->GetDB('tb_header')->num_rows();
-		$data['kategori'] = $this->DButama->GetDB('tb_kategori_produk')->num_rows();
-		$data['kat'] = $this->DButama->GetDB('tb_kategori_produk');
-		$data['produk'] = $this->DButama->GetDB('tb_produk')->num_rows();
-		$data['pr'] = $this->db->order_by('tgl', 'desc');
-		$data['pr'] = $this->db->limit('5');
-		$data['pr'] = $this->DButama->GetDB('tb_produk');
-		$data['admin'] = $this->DButama->GetDB('tb_admin')->num_rows();
-		$data['fasilitas'] = $this->DButama->GetDB('tb_fasilitas');
+		$data['admin'] = $this->DButama->GetDB('tb_admin')->num_rows();  //menghitung jumlah admin
+		$data['user'] = $this->DButama->GetDB('tb_user')->num_rows();  //menghitung jumlah user
+		$data['satuan'] = $this->DButama->GetDB('tb_satuan')->num_rows();  //menghitung jumlah isi tabel satuan
+		$data['barang'] = $this->DButama->GetDB('tb_barang')->num_rows();  //menghitung jumlah isi tabel barang
+		$data['invoice'] = $this->DButama->GetDB('tb_invoice')->num_rows();  //menghitung jumlah isi tabel invoice
+
+		//menghitung jumlah pesanan bersadarkan status pesanan
+		$data['imk'] = $this->DButama->GetDBWhere('tb_invoice', array('status' => 'Menunggu Konfirmasi'))->num_rows();
+		$data['ip'] = $this->DButama->GetDBWhere('tb_invoice', array('status' => 'Proses'))->num_rows();
+		$data['idk'] = $this->DButama->GetDBWhere('tb_invoice', array('status' => 'Dikirim'))->num_rows();
+		$data['isl'] = $this->DButama->GetDBWhere('tb_invoice', array('status' => 'Selesai'))->num_rows();
+		$data['idb'] = $this->DButama->GetDBWhere('tb_invoice', array('status' => 'Dibatalkan'))->num_rows();
+
+		//load tabel invoice
+		$query = $this->db->select('tb_invoice.no_invoice,tb_invoice.total,tb_user.nama'); 
+        $query = $this->db->from('tb_invoice');
+        $query = $this->db->join('tb_user', 'tb_invoice.email_user = tb_user.email');
+        $query = $this->db->order_by('tgl', 'desc');   //mengurutkan data berdasarkan tgl terbaru
+		$query = $this->db->limit('5');  //filter tampilan data sebanyak 5
+		$query = $this->db->get();
+        $data['pesanan'] = $query;
+
+        $data['usr'] = $this->db->order_by('id_user', 'desc');   //mengurutkan data berdasarkan id terbaru
+		$data['usr'] = $this->db->limit('5');  //filter tampilan data sebanyak 5
+        $data['usr'] = $this->DButama->GetDB('tb_user');  //menghitung jumlah admin
+				
 		$this->load->view('admin/temp-header',$title);
 		$this->load->view('admin/v_index',$data);
 		$this->load->view('admin/temp-footer');
